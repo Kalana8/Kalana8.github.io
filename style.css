@@ -194,9 +194,8 @@ flex-shrink: 0;
 }
 
 .social-links a:hover {
-    background-color: #e0e0e0;
+    background-color: #4b88c5;
 }
-
 .social-links svg {
     width: 20px;
     height: 20px;
@@ -271,3 +270,462 @@ flex-shrink: 0;
         font-size: 1rem;
     }
 }
+
+/* Base animation definitions */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  /* Hero section animations */
+  .hero {
+    animation: fadeIn 1s ease-out;
+    overflow: hidden;
+  }
+  
+  .hero-content h1 {
+    animation: slideInUp 0.8s ease-out;
+  }
+  
+  .hero-content p {
+    animation: slideInUp 0.8s ease-out 0.2s;
+    animation-fill-mode: both;
+  }
+  
+  .hero-content .wave {
+    display: inline-block;
+    animation: wave 2.5s infinite;
+    transform-origin: 70% 70%;
+  }
+  
+  .hero-meta {
+    animation: slideInUp 0.8s ease-out 0.4s;
+    animation-fill-mode: both;
+  }
+  
+  .status-dot {
+    animation: pulse 2s infinite;
+  }
+
+  .hero-image {
+    animation: float 6s ease-in-out infinite, fadeIn 1s ease-out 0.8s;
+    animation-fill-mode: both;
+  }
+  
+  /* Optional hover effects for interactive elements */
+  .hero-content a, .hero-meta .availability {
+    transition: all 0.3s ease;
+  }
+  
+  .hero-content a:hover {
+    opacity: 0.8;
+  }
+  
+  .hero-meta .availability:hover {
+    transform: scale(1.05);
+  }
+
+/* About section styles */
+.about-section {
+    padding: 80px 0;
+    background-color: #fff;
+  }
+  
+  .about-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-label {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .about-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+  }
+  
+  .about-image {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-text {
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+  
+  .about-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 24px;
+  }
+  
+  .about-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .about-text p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .availability {
+    margin-top: 30px;
+    font-weight: 500;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .about-content {
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .about-image, 
+    .about-text {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 60px 0;
+    }
+    
+    .about-text h2 {
+      font-size: 26px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .about-section {
+      padding: 40px 0;
+    }
+    
+    .about-text h2 {
+      font-size: 22px;
+    }
+    
+    .about-text p {
+      font-size: 15px;
+    }
+  }
+  
+  /* Dark mode styles - add these to your theme toggle functionality */
+  .dark-mode .about-section {
+    background-color: #111;
+  }
+  
+  .dark-mode .about-label {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  
+  .dark-mode .about-text h2 {
+    color: #fff;
+  }
+  
+  .dark-mode .about-text p {
+    color: #ddd;
+  }
+
+
+  /* About section styles */
+.about-section {
+    padding: 80px 0;
+    background-color: #fff;
+  }
+  
+  .about-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-label {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInDown 0.8s ease backwards;
+    animation-delay: 0.2s;
+  }
+  
+  .about-label:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-content {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+  }
+  
+  .about-image {
+    flex: 0 0 40%;
+    max-width: 40%;
+    animation: fadeInLeft 1s ease backwards;
+    animation-delay: 0.4s;
+    transition: transform 0.5s ease;
+  }
+  
+  .about-image:hover {
+    transform: scale(1.02);
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.5s ease;
+  }
+  
+  .about-image img:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  .about-text {
+    flex: 0 0 55%;
+    max-width: 55%;
+    animation: fadeInRight 1s ease backwards;
+    animation-delay: 0.6s;
+  }
+  
+  .about-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 24px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUpFade 0.8s ease forwards;
+    animation-delay: 0.8s;
+  }
+  
+  .about-text p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUpFade 0.8s ease forwards;
+  }
+  
+  .about-text p:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  .about-text p:nth-child(3) {
+    animation-delay: 1.2s;
+  }
+  
+  .about-text p:nth-child(4) {
+    animation-delay: 1.4s;
+  }
+  
+  .about-text p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .availability {
+    margin-top: 30px;
+    font-weight: 500;
+    animation-delay: 1.6s !important;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .availability::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #6c64ff, #e74c3c);
+    transition: width 0.6s ease;
+  }
+  
+  .availability:hover::after {
+    width: 100%;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideUpFade {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animate on scroll functionality */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .about-content {
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .about-image, 
+    .about-text {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 60px 0;
+    }
+    
+    .about-text h2 {
+      font-size: 26px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .about-section {
+      padding: 40px 0;
+    }
+    
+    .about-text h2 {
+      font-size: 22px;
+    }
+    
+    .about-text p {
+      font-size: 15px;
+    }
+  }
+  
+  /* Dark mode styles */
+  .dark-mode .about-section {
+    background-color: #111;
+  }
+  
+  .dark-mode .about-label {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  
+  .dark-mode .about-text h2 {
+    color: #fff;
+  }
+  
+  .dark-mode .about-text p {
+    color: #ddd;
+  }
