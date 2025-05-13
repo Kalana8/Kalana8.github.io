@@ -3,103 +3,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalana Kavinda</title>
+    <title>Kalana Kavinda | Frontend Developer</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Kalana Kavinda - Frontend Developer specializing in React.js and modern web technologies">
 </head>
 <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
     <div class="container">
         <header>
-            <a href="#" class="logo">Kalana Kavinda</a>
+            <a href="#" class="logo">Kalana<span>.</span></a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <button class="theme-toggle">☀️</button>
-                <a href="#" class="download-btn">Download CV</a>
+                <a href="#" class="download-btn">Resume <i class="fas fa-download"></i></a>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </header>
         
         <section class="hero">
             <div class="hero-content">
-                <h1>Hi, I'm kalana <span class="wave">👋</span></h1>
-                <p>I’m a Frontend Developer specializing in React.js, crafting fast, accessible, and visually stunning web experiences. Passionate about turning ideas into high-performance applications, I blend development and design to create seamless user interactions.</p>                
-                <div class="hero-meta">
-                    <div class="location">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 13.5C13.6569 13.5 15 12.1569 15 10.5C15 8.84315 13.6569 7.5 12 7.5C10.3431 7.5 9 8.84315 9 10.5C9 12.1569 10.3431 13.5 12 13.5Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M12 21C16 17 20 13.4183 20 10C20 6.13401 16.4183 3 12 3C7.58172 3 4 6.13401 4 10C4 13.4183 8 17 12 21Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        kandy, Sri Lanka
-                    </div>
-                    <div class="availability">
-                        <span class="status-dot"></span>
-                        Available for new projects
-                    </div>
+                <div class="hero-greeting">
+                    <span class="greeting-line"></span>
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                <h1 class="hero-name">Kalana Kavinda</h1>
+                <h2 class="hero-title">I build things for the web</h2>
+                <p class="hero-description">
+                    I'm a frontend developer specializing in building exceptional digital experiences. 
+                    Currently, I'm focused on creating accessible, human-centered products.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#projects" class="cta-primary">View my work</a>
+                    <a href="#contact" class="cta-secondary">Contact me</a>
                 </div>
                 
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                            <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Twitter">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
-                        </svg>
-                    </a>
+                <div class="hero-scroll">
+                    <span>Scroll down</span>
+                    <div class="scroll-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
             </div>
             
             <div class="hero-image">
-                <img src="/accets/Hero_img.png" alt="Illustrated developer with laptop and task management icons">
+                <div class="image-wrapper">
+                    <img src="accets/Hero_img.png" alt="Illustrated developer with laptop and task management icons">
+                </div>
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
             </div>
         </section>
-<<<<<<< HEAD
 
         <!-- About Section -->
-<section class="about-section">
-    <div class="about-container">
-      <div class="about-label">About me</div>
-      
-      <div class="about-content">
-        <div class="about-image">
-          <img src="accets/About_img.png" alt="Profile photo of Kalana">
-        </div>
+        <section class="about-section" id="about">
+            <div class="section-header">
+                <span class="section-label">About</span>
+                <h2>Discover my story</h2>
+            </div>
+            
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="accets/About_img.png" alt="Profile photo of Kalana">
+                    <div class="experience-badge">
+                        <span class="years">3+</span>
+                        <span class="text">Years of<br>Experience</span>
+                    </div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-intro">
+                        <h3>Frontend Developer & UI/UX Designer from Sri Lanka</h3>
+                        <p class="about-tagline">Creating beautiful digital experiences that drive results</p>
+                    </div>
+                    
+                    <p>I specialize in crafting modern, responsive websites and applications that not only look stunning but also deliver exceptional user experiences. My approach combines technical expertise with creative design thinking to build solutions that help businesses grow.</p>
+                    
+                    <p>With a background in software engineering and a passion for clean, intuitive design, I bring a unique perspective to every project. I focus on creating websites that load quickly, function flawlessly, and convert visitors into customers.</p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Clean Code</h4>
+                                <p>Well-structured, maintainable solutions</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Responsive Design</h4>
+                                <p>Seamless experience on all devices</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Performance</h4>
+                                <p>Lightning-fast load times</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>10+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat">
+                            <h4>3+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about-cta">
+                        <a href="#contact" class="btn-about">Let's work together <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
         
-        <div class="about-text">
-          <h2>Curious about me? Here you have it:</h2>
-          
-          <p>I'm a passionate UI/UX designer and front-end developer, dedicated to crafting fast, accessible, and visually stunning digital experiences. As an undergraduate software engineer, I focus on bringing both technical excellence and design precision to web applications, ensuring seamless user interactions.</p>
-          
-          <p>My journey in web development started with a deep curiosity for building engaging user interfaces, and since then, I've been continuously learning and evolving. While I'm still gaining professional experience, I'm actively working on real-world projects to refine my skills in React.js, Next.js, Tailwind CSS, and modern front-end technologies.</p>
-          
-          <p>I enjoy tackling challenges, turning ideas into polished products, and pushing the boundaries of front-end development. When I'm not coding, you'll find me exploring new design trends, sharing insights on UI/UX, or getting inspired by the startup ecosystem.</p>
-          
-          <p class="availability">👋 I'm currently available for freelance work, so feel free to connect! Let's build something amazing together. 🚀</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills">
+            <div class="section-header">
+                <span class="section-label">Skills</span>
+                <h2>The skills, tools and technologies I am really good at:</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <img src="accets/skills/javascript.svg" alt="JavaScript">
+                    <span>Javascript</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/typescript.svg" alt="TypeScript">
+                    <span>Typescript</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/react.svg" alt="React">
+                    <span>React</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/nextjs.svg" alt="Next.js">
+                    <span>Next.js</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/nodejs.svg" alt="Node.js">
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/expressjs.svg" alt="Express.js">
+                    <span>Express.js</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/nestjs.svg" alt="Nest.js">
+                    <span>Nest.js</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/dotnet.svg" alt=".NET Core">
+                    <span>.NET Core</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/socketio.svg" alt="Socket.io">
+                    <span>Socket.io</span>
+                </div>
+                
+                <!-- Second row -->
+                <div class="skill-item">
+                    <img src="accets/skills/postgresql.svg" alt="PostgreSQL">
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/tailwindcss.svg" alt="Tailwind CSS">
+                    <span>Tailwindcss</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/mysql.svg" alt="MySQL">
+                    <span>MySQL</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/figma.svg" alt="Figma">
+                    <span>Figma</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/php.svg" alt="PHP">
+                    <span>PHP</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/java.svg" alt="Java">
+                    <span>Java</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/csharp.svg" alt="C#">
+                    <span>C#</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/cpp.svg" alt="C++">
+                    <span>C++</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/storybook.svg" alt="Storybook">
+                    <span>Storybook</span>
+                </div>
+                <div class="skill-item">
+                    <img src="accets/skills/git.svg" alt="Git">
+                    <span>Git</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <div class="section-header">
+                <span class="section-label">Projects</span>
+                <h2>Some of the noteworthy projects I have built:</h2>
+            </div>
+            
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>App Design</span>
+                        </div>
+                        <h3 class="project-title">FOA Clothing App – UI/UX Concept Design</h3>
+                        <p class="project-description">
+                            Designed a modern and minimalist mobile app UI for FOA, a conceptual fashion brand. 
+                            Focused on clean navigation, user-friendly layouts, and responsive mobile interface. 
+                            This project showcases my ability to turn brand identity into interactive designs.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="accets/projects/project1.jpg" alt="FOA Clothing App UI Design">
+                    </div>
+                </div>
 
+                <!-- Project 2 -->
+                <div class="project-card reversed">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Web Design</span>
+                        </div>
+                        <h3 class="project-title">Coffee Shop Website</h3>
+                        <p class="project-description">
+                            Developed a responsive, fully static website for a local coffee shop. Includes sections for 
+                            menu, gallery, and contact. Published on GitHub Pages. Emphasis on layout design, 
+                            animation, and performance optimization.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="accets/projects/project2.jpg" alt="Coffee Shop Website">
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Web App</span>
+                        </div>
+                        <h3 class="project-title">FitZone Fitness Center – Web App</h3>
+                        <p class="project-description">
+                            Developed a multi-page web application for a fictional gym as part of a university 
+                            module. Features include user registration/login, an admin panel for booking, payment 
+                            tracking, and staff management.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="accets/projects/project3.jpg" alt="FitZone Fitness Center Web App">
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card reversed">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Web Design</span>
+                        </div>
+                        <h3 class="project-title">Web Celestia – Freelance Website</h3>
+                        <p class="project-description">
+                            Launched my own freelancing service website offering WebDevelopment
+                            development. Created service sections, a contact form, client testimonials, and
+                            integrated social media. Focused on SEO, responsiveness, and clean design.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="accets/projects/project4.jpg" alt="Web Celestia Freelance Website">
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Web Solution</span>
+                        </div>
+                        <h3 class="project-title">Loan Management System (Client Project)</h3>
+                        <p class="project-description">
+                            Built a custom web dashboard for a microcredit business. Features include
+                            customer records, loan creation, interest tracking, payment due reminders, and
+                            monthly income reports. Focused on functionality, UI clarity, and security.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="accets/projects/project5.jpg" alt="Loan Management System">
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card reversed">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span>Web Design</span>
+                        </div>
+                        <h3 class="project-title">Concept Tourism Website - UI</h3>
+                        <p class="project-description">
+                            Designed a modern and user-friendly landing page for a tourism website with a
+                            focus on user engagement and navigation.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                View Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="accets/projects/project6.jpg" alt="Concept Tourism Website">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <button class="load-more-btn">
+                    <i class="fas fa-arrow-down"></i> Load more
+                </button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <div class="contact-container">
+                <div class="contact-form-container">
+                    <h2>What's next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.</h2>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+                
+                <div class="contact-illustration">
+                    <!-- Illustration is now handled with CSS -->
+                </div>
+            </div>
+            
+            <div class="social-links-container">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
     </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
