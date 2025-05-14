@@ -1810,13 +1810,44 @@ body.dark-mode .skill-item img {
 body.dark-mode .skill-item img[alt="Express.js"] {
     filter: invert(0.8);
     background-color: #333;
-    color: #f0f0f0;
-  }
+}
+
+/* Add to dark mode styles */
+body.dark-mode .about-section:before {
+    background: linear-gradient(135deg, rgba(108, 100, 255, 0.1), rgba(255, 107, 107, 0.1));
+}
+
+body.dark-mode .about-section:after {
+    background: linear-gradient(135deg, rgba(255, 193, 69, 0.1), rgba(108, 100, 255, 0.1));
+}
+
+body.dark-mode .about-content h3 {
+    background: linear-gradient(to right, #ffffff, var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+body.dark-mode .highlight-icon {
+    background-color: rgba(108, 100, 255, 0.2);
+}
+
+body.dark-mode .highlight-text h4 {
+    color: white;
+}
+
+body.dark-mode .about-stats {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .btn-about {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+    .about-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
   
-  .dark-mode .about-text h2 {
-    color: #fff;
-  }
-  
-  .dark-mode .about-text p {
-    color: #ddd;
-  }
