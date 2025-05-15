@@ -18,12 +18,13 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <button class="theme-toggle">☀️</button>
-                <a href="#" class="download-btn">Resume <i class="fas fa-download"></i></a>
+                <a href="accets/CV/resume.docx" class="download-btn" download >Resume <i class="fas fa-download"></i></a>
                 <div class="menu-toggle">
                     <span></span>
                     <span></span>
@@ -146,6 +147,40 @@
             </div>
         </section>
         
+        <!-- Experience Section -->
+        <section class="experience-section" id="experience">
+            <div class="section-header">
+                <span class="section-label">Experience</span>
+                <h2>My Working Experience</h2>
+            </div>
+            
+            <div class="experience-container">
+                <div class="experience-item" data-aos="fade-up">
+                    <div class="experience-timeline">
+                        <span class="experience-period">2024 - Present</span>
+                        <div class="experience-line"></div>
+                    </div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Freelance Web Developer</h3>
+                        <p class="experience-company">Web Celestia</p>
+                        <p class="experience-description">
+                            Designing and developing custom websites for clients across various industries. 
+                            Specializing in responsive, user-friendly interfaces built with modern technologies
+                            including React, Next.js, and Tailwind CSS. Managing projects from concept to deployment 
+                            while ensuring client satisfaction through regular communication and timely delivery.
+                        </p>
+                        <div class="experience-skills">
+                            <span>React</span>
+                            <span>Next.js</span>
+                            <span>Tailwind CSS</span>
+                            <span>UI/UX Design</span>
+                            <span>Client Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- Skills Section -->
         <section class="skills-section" id="skills">
             <div class="section-header">
@@ -262,7 +297,7 @@
                         </div>
                     </div>
                     <div class="project-image">
-                        <img src="accets/projects/project1.jpg" alt="FOA Clothing App UI Design">
+                        <img src="accets/projects/project1.png" alt="FOA Clothing App UI Design" loading="lazy">
                     </div>
                 </div>
 
@@ -285,7 +320,7 @@
                         </div>
                     </div>
                     <div class="project-image">
-                        <img src="accets/projects/project2.jpg" alt="Coffee Shop Website">
+                        <img src="accets/projects/Coffee shop.png" alt="Coffee Shop Website" loading="lazy">
                     </div>
                 </div>
 
@@ -308,7 +343,7 @@
                         </div>
                     </div>
                     <div class="project-image">
-                        <img src="accets/projects/project3.jpg" alt="FitZone Fitness Center Web App">
+                        <img src="accets/projects/project3.jpg" alt="FitZone Fitness Center Web App" loading="lazy">
                     </div>
                 </div>
 
@@ -325,13 +360,13 @@
                             integrated social media. Focused on SEO, responsiveness, and clean design.
                         </p>
                         <div class="project-links">
-                            <a href="#" class="project-link">
+                            <a href="https://web-celestia.store/" class="project-link">
                                 View Project <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                     <div class="project-image">
-                        <img src="accets/projects/project4.jpg" alt="Web Celestia Freelance Website">
+                        <img src="accets/projects/Thumbnail.png" alt="Web Celestia Freelance Website" loading="lazy">
                     </div>
                 </div>
 
@@ -354,7 +389,7 @@
                         </div>
                     </div>
                     <div class="project-image">
-                        <img src="accets/projects/project5.jpg" alt="Loan Management System">
+                        <img src="accets/projects/20250513_1329_Manamperi Loan Management Launch_simple_compose_01jv4actfeewpbmr1bxt393t30.png" alt="Loan Management System" loading="lazy">
                     </div>
                 </div>
 
@@ -376,15 +411,15 @@
                         </div>
                     </div>
                     <div class="project-image">
-                        <img src="accets/projects/project6.jpg" alt="Concept Tourism Website">
+                        <img src="accets/projects/Tourisim Web.png" alt="Concept Tourism Website" loading="lazy">
                     </div>
                 </div>
             </div>
             
             <div class="section-cta">
-                <button class="load-more-btn">
-                    <i class="fas fa-arrow-down"></i> Load more
-                </button>
+                <a href="projects.html" class="load-more-btn">
+                    <i class="fas fa-arrow-down"></i> View all projects
+                </a>
             </div>
         </section>
 
@@ -394,21 +429,34 @@
                 <div class="contact-form-container">
                     <h2>What's next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.</h2>
                     
-                    <form id="contactForm" class="contact-form">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" class="contact-form">
+                        <!-- Replace with your actual Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="3a71bf9f-d438-48b9-b609-6b8b774a5a75">
+                    
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" placeholder="Name" required>
                         </div>
+                    
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" placeholder="Email" required>
                         </div>
+                    
                         <div class="form-group">
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
                         </div>
+                    
+                        <!-- Honeypot for spam protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    
+                        <!-- Optional: Redirect to thank you page after submission -->
+                        <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you.html">
+                    
                         <button type="submit" class="submit-btn">Submit</button>
                     </form>
+                    
                 </div>
                 
                 <div class="contact-illustration">
@@ -417,15 +465,14 @@
             </div>
             
             <div class="social-links-container">
-                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100076823059828" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/kalana_kavinda__/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/kalana_kavinda_" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/kalana-kavinda-7011a3269/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Kalana8" class="social-icon"><i class="fab fa-github"></i></a>
             </div>
         </section>
     </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
